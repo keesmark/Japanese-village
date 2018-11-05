@@ -2,6 +2,7 @@
 $main_color: #000;
 $sub_color: #fffff9;
 $point_color: #dd2131;
+$font_color: #fff;
 $font_family: "Georgia";
 
 /*   share------------------------------------
@@ -17,6 +18,29 @@ body {
 	text-align: center;
 	margin: 60px 0;
 }
+
+.box_caption {
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  margin: 1em 0;
+  padding: 1em 2em;
+  border: 1px solid #fff;
+	.caption{
+		position: absolute;
+	  top: 0;
+	  left: 0;
+	  font-size: 1em;
+	  padding: 0 1em;
+	  margin: 0;
+	  color: $font_color;
+	  font-weight: 700;
+	  background-color: $point_color;
+	  transform: translateY(-50%) translateX(1em);
+	}
+}
+
+
 
 /*   header------------------------------------
 ----------------------------------------------*/
@@ -45,7 +69,7 @@ header {
 				a {
 					font-family: "Lucida Grande";
 					text-decoration: none;
-					color: #fff;
+					color: $font_color;
 					font-size: 18px;
 				}
 			}
@@ -82,7 +106,7 @@ header {
 						height: auto;
 						width: 100%;
 						display: block;
-						transition-duration: 0.3s;
+						transition-duration: 0.2s;
 					}
 					p {
 						position: absolute;
@@ -109,7 +133,7 @@ header {
 			    -o-transform: scale(1.2);
 			    -ms-transform: scale(1.2);
 			    transform: scale(1.2);
-			    transition-duration: 0.3s;
+			    transition-duration: 0.2s;
 			    opacity: 0.6;
 				}
 				p {
@@ -121,3 +145,40 @@ header {
 		}
 	}
 }
+
+/*  reservations ------------------------------------
+----------------------------------------------*/
+
+#reservations {
+	padding: 30px 0;
+	background-image: url(../images/kanpai2.jpg);
+	background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+	#reservations_details {
+		color: $font_color;
+		text-align: center;
+		font-size: 20px;
+		line-height: 1.5em;
+		.tel {
+			font-size: 24px;
+			margin: 20px 0;
+		}
+	}
+}
+#reservations::before {
+  content: '';
+  background-color: rgba(0,0,0,0.8);
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+

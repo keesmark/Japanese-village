@@ -12,6 +12,27 @@ body {
   margin: 60px 0;
 }
 
+.box_caption {
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  margin: 1em 0;
+  padding: 1em 2em;
+  border: 1px solid #fff;
+}
+.box_caption .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+  padding: 0 1em;
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+  background-color: #dd2131;
+  transform: translateY(-50%) translateX(1em);
+}
+
 /*   header------------------------------------
 ----------------------------------------------*/
 header {
@@ -69,7 +90,7 @@ header nav ul li a {
   height: auto;
   width: 100%;
   display: block;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
 }
 #menu #menu_li ul li a p {
   position: absolute;
@@ -90,11 +111,45 @@ header nav ul li a {
   -o-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
   opacity: 0.6;
 }
 #menu #menu_li ul li:hover p {
   border: 1px solid #fff;
   width: 200px;
   text-align: center;
+}
+
+/*  reservations ------------------------------------
+----------------------------------------------*/
+#reservations {
+  padding: 30px 0;
+  background-image: url(../images/kanpai2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+#reservations #reservations_details {
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+#reservations #reservations_details .tel {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+#reservations::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }

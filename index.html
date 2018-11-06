@@ -9,6 +9,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
@@ -63,12 +64,63 @@
 			</div>
 			
 		</div>
+		<h2 class="h2">Location</h2>
 		<div id="location">
-			<h2 class="location">Location</h2>
+			<div id="map"></div>
 		</div>
 	</div>
 	<footer>
+		<div id="footer_wrapper">
+			<ul class="footer_list">
+				<li><a href="#">Menus</a></li>
+				<li><a href="#">Lunch</a></li>
+				<li><a href="#">Dinner</a></li>
+				<li><a href="#">Bar</a></li>
+			</ul>
+			<ul class="footer_list">
+				<li><a href="#">CONTACT</a></li>
+				<li>317 10 Ave SW,<br>Calgary, AB T2R 0A5</li>
+				<li>403-262-2738</li>
+			</ul>
+			<ul class="footer_list">
+				<li><a href="#">HOURS</a></li>
+				<li>
+					<dl>
+						<dt>MONDAY - THURSEDAY</dt>
+						<dd>11:45am - 2:00pm / 5:00pm - 9:00pm</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>FRIDAY</dt>
+						<dd>11:45am - 2:00pm / 5:00am - 9:30pm</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>SATURDAY</dt>
+						<dd>3:45pm - 9:30pm</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>SUNDAY</dt>
+						<dd>4:45pm - 8:45pm</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
 		
+		<ul class="social_icon">
+			<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+			<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+			<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+		</ul>
+		<div id="copy">
+			<small>&copy; 2018<script>new Date().getFullYear()>2018&&document.write("-"+new Date().getFullYear());</script> japanesevillage-calgary.ca created by <a href="">katsuhisa-hata.com</a></small>
+		</div>
 	</footer>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyChwv4M_kQbfnHz2EHankuDopOqZCCqemw"></script>
+<<script src="js/main.js" ></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
-/*   share------------------------------------
+@charset "UTF-8";
+/*   　common ------------------------------------
 ----------------------------------------------*/
 body {
   font-family: "Georgia";
@@ -56,19 +57,46 @@ header nav ul li {
   float: left;
   margin-left: 30px;
   line-height: 50px;
-}
-header nav ul li a {
   font-family: "Lucida Grande";
-  text-decoration: none;
   color: #fff;
   font-size: 18px;
 }
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
 
-/*   main image------------------------------------
+/*  slide ------------------------------------
 ----------------------------------------------*/
-#main_img #slide img {
+#main_img #slide_wrapp li img {
   width: 100%;
   height: 100vh;
+}
+
+#slide_wrapp {
+  position: relative;
+  overflow: hidden;
+}
+#slide_wrapp .slide_item {
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 2s linear, transform 8.5s linear;
+  position: relative;
+  z-index: 1;
+}
+#slide_wrapp .slide_item:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#slide_wrapp .slide_item.show_ {
+  opacity: 1;
+}
+#slide_wrapp .slide_item.zoom_ {
+  transform: scale(1.2);
+}
+#slide_wrapp .slide_item img {
+  display: block;
 }
 
 /*  menu ------------------------------------
@@ -192,7 +220,7 @@ footer #footer_wrapper ul li a {
 footer .social_icon {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 footer .social_icon li {
   margin-right: 20px;

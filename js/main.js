@@ -255,3 +255,47 @@ function googleMap() {
 	googleMap();
 });
 
+window.addEventListener('load', function () {
+   sliderStart();
+});
+
+function sliderStart() {
+
+    const slide = document.getElementById('slide_wrapp');
+    const slideItem = slide.querySelectorAll('.slide_item'); 
+    const totalNum = slideItem.length - 1;
+    const FadeTime = 2000;                           
+    const IntarvalTime = 7000;                           
+    let actNum = 0;                                    
+    let nowSlide;                                              
+    let NextSlide;
+
+    slideItem[0].classList.add('show_', 'zoom_');
+
+    setInterval(() => {
+        if (actNum < totalNum) {
+
+            let nowSlide = slideItem[actNum];
+            let NextSlide = slideItem[++actNum];
+
+            nowSlide.classList.remove('show_');
+            NextSlide.classList.add('show_', 'zoom_');
+            setTimeout(() => {
+                nowSlide.classList.remove('zoom_');
+            }, FadeTime);
+
+        } else {
+
+            let nowSlide = slideItem[actNum];
+            let NextSlide = slideItem[actNum = 0];
+
+            nowSlide.classList.remove('show_');
+            NextSlide.classList.add('show_', 'zoom_');
+            setTimeout(() => {
+                nowSlide.classList.remove('zoom_');
+            }, FadeTime);
+
+        };
+    }, IntarvalTime);
+
+}

@@ -7,37 +7,59 @@
 	<meta name="Description" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
+	<link rel="icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon-152x152.png" sizes="152x152">
+	<link rel="icon" href="images/favicon-192x192.png" sizes="192x192" type="image/png">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
+<div id="wrapper">
 	<header>
-		<div id="logo"><img src="images/logo_pc.png" alt="Japanese village logo"></div>
+		<div id="logo">
+			<img src="images/logo_pc.png" alt="Japanese village logo" class="pc">
+			<img src="images/logo_sp2.png" alt="Japanese village logo" class="sp"><img src="images/logo_sp02.png" alt="" class="sp logo_02">
+		</div>
+		<div id="nav_toggle">
+			<div>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 		<nav class="cf">
-			<ul>
+			<ul id="nav_ul">
 				<li><a href="#">Home</a></li>
-				<li>Menu</li>
+				<li id="menu_nav">
+					Menu<i class="fas fa-angle-down"></i>
+					<ul id="menu_nav_li">
+						<li><a href="#">Lunch</a></li>
+						<li><a href="#">Dinner</a></li>
+						<li><a href="#">Bar</a></li>
+					</ul>
+				</li>
 				<li><a href="#">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
 	<div id="main_img">
 		<ul id="slide_wrapp">
-		  <li class="slide_item"><img src="images/slide01.jpg" alt="fire show"></li>
+		  <li class="slide_item"><img src="images/slide01.jpg" alt="fire show" id="img_fire"></li>
 		  <li class="slide_item"><img src="images/slide02.jpg" alt="fire show"></li>
 		  <li class="slide_item"><img src="images/slide03.jpg" alt="fire show"></li>
 		</ul>
+		<div id="scroll"><span></span>Scroll</div>
 	</div>
-	<div id="wrapper">
+	
 		<div id="menu">
 			<h2 class="h2">Menus</h2>
 			<div id="menu_li">
 				<ul>
-					<li><a href="#"><img src="images/menu_lunch2.jpg" alt="lunch menu"><p>Lunch</p></a></li>
+					<li><a href="#"><img src="images/menu_lunch2.jpg" alt="lunch menu" class="menu_lunch"><p>Lunch</p></a></li>
 					<li><a href="#"><img src="images/menu_dinner2.jpg" alt="dinner menu"><p>Dinner</p></a></li>
-					<li><a href="#"><img src="images/menu_bar2.jpg" alt="bar menu"><p>Bar</p></a></li>
+					<li><a href="#"><img src="images/menu_bar2.jpg" alt="bar menu" class="menu_bar"><p>Bar</p></a></li>
 				</ul>
 			</div>
 		</div>
@@ -45,10 +67,10 @@
 		<div id="reservations">
 			<div id="reservations_details">
 				<p>For reservations please call us at</p>
-				<p class="tel">403-262-2738</p>
+				<p class="tel"><a href="tel:403-262-2738">403-262-2738</a></p>
 
 				<div class="box_caption">
-					<p class="caption">Our reservations line opens</p>
+					<p class="caption">Reservations line opens</p>
 					<dl>
 						<dt>Monday - Friday</dt>
 						<dd>10:00am - 9:30pm</dd>
@@ -70,22 +92,21 @@
 		<div id="location">
 			<div id="map"></div>
 		</div>
-	</div>
 	<footer>
 		<div id="footer_wrapper">
 			<ul class="footer_list">
-				<li><a href="#">Menus</a></li>
+				<li><a href="#" class="bold">Menus</a></li>
 				<li><a href="#">Lunch</a></li>
 				<li><a href="#">Dinner</a></li>
 				<li><a href="#">Bar</a></li>
 			</ul>
 			<ul class="footer_list">
-				<li><a href="#">CONTACT</a></li>
+				<li><a href="#" class="bold">CONTACT</a></li>
 				<li>317 10 Ave SW,<br>Calgary, AB T2R 0A5</li>
 				<li>403-262-2738</li>
 			</ul>
 			<ul class="footer_list">
-				<li><a href="#">HOURS</a></li>
+				<li><a href="#" class="bold">HOURS</a></li>
 				<li>
 					<dl>
 						<dt>MONDAY - THURSEDAY</dt>
@@ -122,6 +143,8 @@
 			<small>&copy; 2018<script>new Date().getFullYear()>2018&&document.write("-"+new Date().getFullYear());</script> japanesevillage-calgary.ca created by <a href="">katsuhisa-hata.com</a></small>
 		</div>
 	</footer>
+</div>
+<a href="#" class="top"><i class="fas fa-arrow-circle-up"></i></a>	
 <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyChwv4M_kQbfnHz2EHankuDopOqZCCqemw"></script>
 <script src="js/main.js" ></script>
 </body>

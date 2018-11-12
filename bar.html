@@ -7,18 +7,39 @@
 	<meta name="Description" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
+	<link rel="icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon-152x152.png" sizes="152x152">
+	<link rel="icon" href="images/favicon-192x192.png" sizes="192x192" type="image/png">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
+<div id="wrapper">
 	<header>
-		<div id="logo"><img src="images/logo_pc.png" alt="Japanese village logo"></div>
+		<div id="logo">
+			<img src="images/logo_pc.png" alt="Japanese village logo" class="pc">
+			<img src="images/logo_sp2.png" alt="Japanese village logo" class="sp"><img src="images/logo_sp02.png" alt="" class="sp logo_02">
+		</div>
+		<div id="nav_toggle">
+			<div>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 		<nav class="cf">
-			<ul>
+			<ul id="nav_ul">
 				<li><a href="#">Home</a></li>
-				<li>Menu</li>
+				<li id="menu_nav">
+					Menu<i class="fas fa-angle-down"></i>
+					<ul id="menu_nav_li">
+						<li><a href="#">Lunch</a></li>
+						<li><a href="#">Dinner</a></li>
+						<li><a href="#">Bar</a></li>
+					</ul>
+				</li>
 				<li><a href="#">Contact</a></li>
 			</ul>
 		</nav>

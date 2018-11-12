@@ -298,4 +298,33 @@ function sliderStart() {
         };
     }, IntarvalTime);
 
+};
+function updateButton() {
+    if ($(this).scrollTop() >= 300) { 
+        $(".top").fadeIn();
+    } else {
+        $(".top").fadeOut();
+    }
 }
+$(function() {
+    updateButton();
+    $(window).scroll(updateButton);
+    $(".top").click(function() {
+        $("html, body").animate({
+            scrollTop: 0,
+        }, 600);
+        return false;
+    });
+});
+$(function(){
+	$('#nav_toggle').click(function(){
+		$("header").toggleClass('open');
+		$("nav").fadeToggle(500);
+	});
+});
+
+$(function(){
+	$("#menu_nav").on("click", function() {
+		$("#menu_nav ul").slideToggle();
+	});
+});

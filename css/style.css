@@ -63,7 +63,7 @@ body {
 .pc {
   display: block; }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   .pc {
     display: none; }
 
@@ -128,7 +128,7 @@ header {
         width: 100px;
         background-color: rgba(0, 0, 0, 0.8);
         margin-left: 0; } }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   header {
     height: 60px;
     padding: 5px 20px; }
@@ -302,7 +302,7 @@ header {
   100% {
     transform: rotate(-45deg) translate(-20px, 20px);
     opacity: 0; } }
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   #main_img #slide_wrapp li img {
     object-fit: cover;
     object-position: 75% 75%; }
@@ -351,7 +351,7 @@ header {
         width: 200px;
         text-align: center; }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   #menu #menu_li ul {
     flex-direction: column; }
     #menu #menu_li ul li {
@@ -404,7 +404,7 @@ header {
   bottom: 0;
   left: 0; }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   #reservations p {
     width: 90%;
     margin: 0 auto;
@@ -541,7 +541,7 @@ footer {
     margin-left: 200px; }
   #menu_wrapper .h3 {
     margin-left: 200px; } }
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   #menu_wrapper {
     font-size: 18px; }
     #menu_wrapper dl {
@@ -573,7 +573,7 @@ footer {
       text-align: left;
       list-style-type: disc; }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   #menu_wrapper .lunch_box div ul {
     width: 90%;
     height: auto;
@@ -600,7 +600,7 @@ footer {
   #menu_wrapper #dinner_steak dd {
     margin: 10px 50px; }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   #menu_wrapper .dinner_box div p {
     width: 100; }
   #menu_wrapper .dinner_box div ul {
@@ -644,26 +644,29 @@ footer {
     border: 1px solid #fff;
     padding: 10px 20px; }
   #contact_wrapper #contact_reservation p {
+    font-size: 20px;
     margin-top: 30px;
     border-bottom: 1px solid #fff;
     display: inline-block; }
 
 #contact_location {
   text-align: center;
-  color: #fff; }
+  color: #fff;
+  margin-bottom: 50px; }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   #contact_wrapper {
     width: 90%;
     flex-direction: column;
     margin: 50px auto;
     text-align: center; }
-    #contact_wrapper dl dt {
+    #contact_wrapper div dl dt {
       font-size: 18px; }
-    #contact_wrapper dl dd {
-      fonr-size: 16px; }
+    #contact_wrapper div dl dd {
+      font-size: 16px; }
     #contact_wrapper .h3_contact {
-      text-align: center; }
+      text-align: center;
+      font-size: 30px; }
     #contact_wrapper #contact_hour {
       margin-right: 0;
       margin-bottom: 30px; } }
